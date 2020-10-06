@@ -5,6 +5,7 @@ const {
 const viaplayData = require('../dataAccess/viaplayData');
 const tmdbData = require('../dataAccess/tmDbData');
 const cacheMgr = require('../utils/cacheManager');
+const logger = require('../utils/logger');
 
 /**
  * Retreives a trailer url based on an url to a viaplay film resource description
@@ -19,6 +20,7 @@ module.exports.getTrailerUrl = async function getTrailerUrl(viaplayResourceUrl) 
     // Check if this is in the cache already, if so send it back.
     const cachedTrailerUrl = cacheMgr.get(CACHE_PREFIX + viaplayResourceUrl);
     if (cachedTrailerUrl != null) {
+        logger.debug(`Value found in cache ${cachedTrailerUrl}`);
         return cachedTrailerUrl;
     }
 

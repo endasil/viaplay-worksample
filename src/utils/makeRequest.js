@@ -64,7 +64,7 @@ module.exports = async function makeRequest(requestOptions) {
         const stopTime = new Date().getTime();
 
         logger.debug(`Successful makeRequest call to ${options.method} ${options.url} request time: ${(stopTime - startTime)}`
-            + `statusCode from call: ${response ? response.statusCode : 500}`);
+            + ` statusCode from call: ${response ? response.statusCode : 500}`);
 
         const responseObj = {};
         responseObj.headers = response.headers;

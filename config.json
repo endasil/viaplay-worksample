@@ -1,5 +1,5 @@
 {
-  "LOG_LEVEL": "error",
+  "LOG_LEVEL": "info",
   "LISTEN_PORT": "1337",
   "THE_MOVIE_DB_URL": "http://api.themoviedb.org/3/movie",
   "THE_MOVIE_DB_API_KEY": "04da899fd3f500358295ca1b9eda8d47",
