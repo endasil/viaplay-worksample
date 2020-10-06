@@ -1,0 +1,9 @@
+{
+  "LOG_LEVEL": "error",
+  "LISTEN_PORT": "1337",
+  "THE_MOVIE_DB_URL": "http://api.themoviedb.org/3/movie",
+  "THE_MOVIE_DB_API_KEY": "04da899fd3f500358295ca1b9eda8d47",
+  "YOUTUBE_TRAILER_URL": "https://www.youtube.com/watch",
+  "VIAPLAY_CONTENT_URL": "https://content.viaplay.se/pc-se/film",
+  "CACHE_TTL": 60
+}

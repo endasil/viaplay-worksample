@@ -1,0 +1,117 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "0.0.1",
+    "title": "viaplay worksample"
+  },
+  "host": "",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "tags": [
+    {
+      "name": "viaplay worksample",
+      "description": ""
+    }
+  ],
+  "paths": {
+    "/ping": {
+      "get": {
+        "tags": [
+          "viaplay worksample"
+        ],
+        "summary": "pong!",
+        "responses": {
+          "200": {
+            "description": "pong! Endpoint for testing that the service is up n running"
+          },
+          "500": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/film/trailer/path/{publicPath}": {
+      "get": {
+        "tags": [
+          "viaplay worksample"
+        ],
+        "summary": "Retrieve the url for a trailer based on a publicPath value.",
+        "responses": {
+          "200": {
+            "description": "Success!"
+          },
+          "500": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "publicPath",
+            "in": "path",
+            "required": true,
+            "description": "Enter a viaplay publicPath value here.",
+            "type": "string",
+            "default": "bloodshot-2020"
+          }
+        ]
+      }
+    },
+    "/film/trailer/url/{resourceUrl}": {
+      "get": {
+        "tags": [
+          "viaplay worksample"
+        ],
+        "summary": "Retrieve the url for a trailer based on a movies resource url.",
+        "responses": {
+          "200": {
+            "description": "Success!"
+          },
+          "500": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "resourceUrl",
+            "in": "path",
+            "required": true,
+            "description": "Enter a viaplay resource url here.",
+            "type": "string",
+            "default": "https://content.viaplay.se/pc-se/film/bloodshot-2020"
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "Error": {
+      "required": ["code", "message"],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

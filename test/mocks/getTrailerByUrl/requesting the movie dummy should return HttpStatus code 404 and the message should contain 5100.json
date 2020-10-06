@@ -1,0 +1,50 @@
+[
+  {
+    "scope": "https://content.viaplay.se:443",
+    "method": "GET",
+    "path": "/pc-se/film/bdummy",
+    "body": "",
+    "status": 404,
+    "response": {
+      "code": 5100,
+      "redirectPath": "/pc-se/film",
+      "url": "/pc-se/film/bdummy"
+    },
+    "rawHeaders": [
+      "Content-Type",
+      "application/json; charset=utf-8",
+      "Content-Length",
+      "77",
+      "Connection",
+      "close",
+      "Cache-Control",
+      "private, max-age=0",
+      "Date",
+      "Tue, 29 Sep 2020 19:32:19 GMT",
+      "ETag",
+      "W/\"45-lpUycHbAGu1N4JWFYRh0qla29jw\"",
+      "Vary",
+      "Accept-Encoding",
+      "X-Client-IP",
+      "213.64.70.147",
+      "X-Country",
+      "SE",
+      "X-GeoIP",
+      "SE",
+      "X-Instance-IP",
+      "10.2.95.250",
+      "X-User-Agent",
+      "Amazon CloudFront",
+      "X-Cache",
+      "Error from cloudfront",
+      "Via",
+      "1.1 909148671fe00df5415904e5ad7e738c.cloudfront.net (CloudFront)",
+      "X-Amz-Cf-Pop",
+      "ARN1-C1",
+      "X-Amz-Cf-Id",
+      "Nixd2f1REE_ZaSc6t2JnvuMsVXxzXJQJG69iBFt49IanTGqnKO1-RA==",
+      "Age",
+      "0"
+    ]
+  }
+]

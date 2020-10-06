@@ -1,0 +1,40 @@
+{
+  "name": "viaplay-worksample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Jonas Stoor",
+  "license": "ISC",
+  "scripts": {
+    "localredis": "docker run --name some-redis -p 6379:6379 -d redis ",
+    "swagger": "npm run swagger:open && npm run swagger:serve",
+    "swagger:open": "opener http://localhost:3001/swagger-ui.html?url=http://localhost:1337/api-docs",
+    "swagger:serve": "http-server node_modules/swagger-ui-lite -p 3001",
+    "test": "node node_modules/mocha/bin/mocha --recursive",
+    "coverage": "nyc --reporter=html  --reporter=text-summary npm run test",
+    "prepush": "npm run test"
+  },
+  "dependencies": {
+    "mocha": "^8.1.3",
+    "node-cache": "^5.1.2",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9",
+    "restify": "^4.3.0",
+    "swaggerize-restify": "^2.0.10",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "http-server": "^0.12.3",
+    "husky": "^4.3.0",
+    "node-auto-mock": "git+https://github.com/endasil/nodejs-auto-mock.git",
+    "nyc": "^15.1.0",
+    "opener": "^1.4.3",
+    "sinon": "^9.1.0",
+    "swagger-ui-lite": "^2015.11.7",
+    "why-is-node-running": "^2.2.0"
+  }
+}
